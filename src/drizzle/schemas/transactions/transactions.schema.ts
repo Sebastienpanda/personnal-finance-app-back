@@ -18,7 +18,7 @@ export const transactions = pgTable('transactions', {
         .references(() => categories.id)
         .notNull(),
     amount: numeric({ precision: 18, scale: 2 }).notNull(),
-    recurring: boolean().notNull(),
+    recurring: boolean().notNull().default(false),
     created_at: timestamp().defaultNow(),
     created_by: uuid()
         .references(() => users.id)
