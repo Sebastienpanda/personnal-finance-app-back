@@ -1,4 +1,14 @@
-import { Body, Controller, Get, HttpCode, HttpStatus, Param, Patch, Post, Res, } from '@nestjs/common';
+import {
+    Body,
+    Controller,
+    Get,
+    HttpCode,
+    HttpStatus,
+    Param,
+    Patch,
+    Post,
+    Res,
+} from '@nestjs/common';
 import { CategoryService } from './category.service';
 import { CreateCategoryDto } from './dto/create-category.dto';
 import { UpdateCategoryDto } from './dto/update-category.dto';
@@ -23,11 +33,13 @@ export class CategoryController {
     }
 
     @Get('all')
+    @HttpCode(HttpStatus.OK)
     findAll() {
         return this.categoryService.findAll();
     }
 
     @Get(':id')
+    @HttpCode(HttpStatus.OK)
     findOne(@Param('id') id: string) {
         return this.categoryService.findOne(id);
     }

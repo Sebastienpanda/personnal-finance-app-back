@@ -10,6 +10,5 @@ export class DrizzleService {
     constructor(
         @Inject(DRIZZLE)
         public readonly db: DrizzleDb,
-    ) {
-    }
+    ) {}
 }
