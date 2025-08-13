@@ -1,4 +1,14 @@
-import { Body, Controller, Get, HttpCode, HttpStatus, Param, Patch, Post, Res, } from '@nestjs/common';
+import {
+    Body,
+    Controller,
+    Get,
+    HttpCode,
+    HttpStatus,
+    Param,
+    Patch,
+    Post,
+    Res,
+} from '@nestjs/common';
 import { PotsService } from './pots.service';
 import { CreatePotDto } from './dto/create-pot.dto';
 import { UpdatePotDto } from './dto/update-pot.dto';
