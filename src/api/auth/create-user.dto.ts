@@ -1,5 +1,5 @@
 export class CreateUserDto {
     email: string;
-    supabaseId: string;
+    authId: string;
     username: string;
 }
