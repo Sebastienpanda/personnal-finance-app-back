@@ -46,12 +46,12 @@ export class CategoryController {
 
     @Patch(':id')
     @HttpCode(HttpStatus.NO_CONTENT)
-    update(
+    async update(
         @Param('id') id: string,
         @Body() updateCategoryDto: UpdateCategoryDto,
         @Res() res: FastifyReply,
     ) {
-        this.categoryService.update(id, updateCategoryDto);
+        await this.categoryService.update(id, updateCategoryDto);
 
         return res.status(HttpStatus.NO_CONTENT).send({
             status: HttpStatus.NO_CONTENT,
